@@ -1,2 +1,5 @@
-package Tree;public class BST {
+package Tree;
+
+public class BST {
+
 }
