@@ -21,9 +21,10 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 34, 2, 7, 23, 31, 38, 13, 11, 37, 19, 45, 6 };
-        int longestSubsequenceCount = LongestConsecutiveSubsequence.findLongestSubsequence(arr);
-        System.out.println("The longest subsequence count is " + longestSubsequenceCount);
+        int[] left = { 1, 4, 3, 1 };
+        int[] right = { 15, 8, 5, 4 };
+        int maxOccured = MaximumOccuredInteger.maxOccured(3, left, right, 15);
+        System.out.println("max occured integer is " + maxOccured);
     }
 
     public static void Print(int[] arr) {
