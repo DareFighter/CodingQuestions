@@ -21,10 +21,9 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] left = { 1, 4, 3, 1 };
-        int[] right = { 15, 8, 5, 4 };
-        int maxOccured = MaximumOccuredInteger.maxOccured(3, left, right, 15);
-        System.out.println("max occured integer is " + maxOccured);
+        int[] arr = { 3, 2, 1, 4 };
+        var res = CheckArraySortedAndRotated.checkRotatedAndSorted(arr, 4);
+        System.out.println("Array is sorted and rotated: " + res);
     }
 
     public static void Print(int[] arr) {
