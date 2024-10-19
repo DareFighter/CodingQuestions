@@ -21,7 +21,6 @@ public class CheckArraySortedAndRotated {
         }
 
         return (increasingBreaks == 1 || decreasigBreaks == 1);
-
     }
 
 }

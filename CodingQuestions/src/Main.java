@@ -21,15 +21,17 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 3, 2, 1, 4 };
-        var res = CheckArraySortedAndRotated.checkRotatedAndSorted(arr, 4);
-        System.out.println("Array is sorted and rotated: " + res);
+        int arr[] = { 10, 20, 40, 20, 30 };
+        MergeSort.sort(arr, 0, arr.length - 1);
+        Print(arr);
+
     }
 
     public static void Print(int[] arr) {
         for (int num : arr) {
             System.out.print(num + " ");
         }
+        System.out.println();
     }
 
     private static void printBinaryTree(TreeNode<Integer> root) {
