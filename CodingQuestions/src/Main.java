@@ -21,17 +21,16 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int arr[] = { 10, 20, 40, 20, 30 };
-        MergeSort.sort(arr, 0, arr.length - 1);
-        Print(arr);
 
+        int[] arr = { 0, 1, 1, 0, 1, 0, 1, 1, 1 };
+        int maxConsecutiveOnes = MaximumConsecutiveOnes.maxiumConsecutiveOnes(arr);
+        System.out.println("Maximum consective ones: " + maxConsecutiveOnes);
     }
 
     public static void Print(int[] arr) {
         for (int num : arr) {
             System.out.print(num + " ");
         }
-        System.out.println();
     }
 
     private static void printBinaryTree(TreeNode<Integer> root) {
