@@ -22,7 +22,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = { 0, 1, 1, 0, 1, 0, 1, 1, 1 };
+        int[] arr = { 1, 1, 1, 1, 0, 1, 0, 1, 1, 1 };
         int maxConsecutiveOnes = MaximumConsecutiveOnes.maxiumConsecutiveOnes(arr);
         System.out.println("Maximum consective ones: " + maxConsecutiveOnes);
     }
