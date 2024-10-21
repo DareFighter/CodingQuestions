@@ -21,10 +21,9 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
-        int[] arr = { 1, 1, 1, 1, 0, 1, 0, 1, 1, 1 };
-        int maxConsecutiveOnes = MaximumConsecutiveOnes.maxiumConsecutiveOnes(arr);
-        System.out.println("Maximum consective ones: " + maxConsecutiveOnes);
+        int arr[] = { 10, 12, 8, 4 };
+        int subArrayLength = LongestEvenOddSubArray.lengthOfLongestEvenOddSubArray(arr);
+        System.out.println("Length of Sub Array length : " + subArrayLength);
     }
 
     public static void Print(int[] arr) {
