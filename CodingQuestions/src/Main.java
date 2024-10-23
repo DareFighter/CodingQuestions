@@ -22,15 +22,10 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[][] matrix = {
-                { 3, 30, 38 },
-                { 36, 43, 60 },
-                { 40, 51, 69 }
-        };
-
-        int target = 69;
-        boolean isTargetPresent = ColumSortedMatrix.searchElement(matrix, 3, 3, target);
-        System.out.println("Is Target Present: " + isTargetPresent);
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int target = 15;
+        ArrayList<Integer> res = IndexesOfSubArraySum.subarraySum(arr, target);
+        System.out.println(res.toString());
     }
 
     public static void Print(int[] arr) {
