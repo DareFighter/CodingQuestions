@@ -4,6 +4,7 @@ import LList.LRUCache;
 import Recursion.PalindromicPartition;
 import Recursion.PowerOfNumbers;
 import Recursion.PowerSets;
+import Searching.ColumSortedMatrix;
 import Searching.Count;
 import Sorting.MergeSort;
 import Sorting.MergeThreeSortedArray;
@@ -21,9 +22,15 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int arr[] = { 10, 12, 8, 4 };
-        int subArrayLength = LongestEvenOddSubArray.lengthOfLongestEvenOddSubArray(arr);
-        System.out.println("Length of Sub Array length : " + subArrayLength);
+        int[][] matrix = {
+                { 3, 30, 38 },
+                { 36, 43, 60 },
+                { 40, 51, 69 }
+        };
+
+        int target = 69;
+        boolean isTargetPresent = ColumSortedMatrix.searchElement(matrix, 3, 3, target);
+        System.out.println("Is Target Present: " + isTargetPresent);
     }
 
     public static void Print(int[] arr) {
