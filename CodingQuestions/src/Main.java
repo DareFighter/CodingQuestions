@@ -1,5 +1,7 @@
 import Arrays.*;
 import Graph.Graph;
+import Hashing.LongestConsecutiveSub;
+import Hashing.PositiveNegativePair;
 import Hashing.TripletSum;
 import LList.LRUCache;
 import Recursion.LuckyNumber;
@@ -26,11 +28,11 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 4, 3, 6 };
-        int n = 5;
-        int target = 10;
-        var isTripletPresent = TripletSum.find3Numbers(arr, n, target);
-        System.out.println("Is triplet sum present: " + isTripletPresent);
+        int[] arr = { 1, 9, 3, 10, 4, 20, 2 };
+
+        int longestConsecutiveSubSeq = LongestConsecutiveSub.findLongesetConseqSubSeq(arr);
+        System.out.print("Longest consecutive sub sequence: " + longestConsecutiveSubSeq);
+        System.out.println();
     }
 
     public static void Print(int[] arr) {

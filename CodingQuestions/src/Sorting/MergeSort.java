@@ -1,5 +1,7 @@
 package Sorting;
 
+import java.util.Arrays;
+
 public class MergeSort {
 
     // [1,3,5,7]
@@ -8,19 +10,25 @@ public class MergeSort {
     // [5,6,7,8,9]
     // naive approach
     public static void MergeWithoutExtraSpace(int[] arr1, int[] arr2) {
-        int i = 0;
-        int j = 0;
+        int i = n - 1; // Last index of arr1
+        int j = 0; // First index of arr2
 
-        while (i < arr1.length) {
-            if (arr1[i] > arr2[0]) {
+        // Swap elements to ensure arr1 has the smallest elements and arr2 has the
+        // largest elements.
+        while (i >= 0 && j < m) {
+            if (arr1[i] > arr2[j]) {
+                // Swap the elements
                 int temp = arr1[i];
-                arr1[i] = arr2[0];
-                arr2[0] = temp;
-                FixArray2(arr2);
+                arr1[i] = arr2[j];
+                arr2[j] = temp;
             }
-
-            i++;
+            i--;
+            j++;
         }
+
+        // Sort both arrays to maintain sorted order
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
     }
 
     public static void FixArray2(int[] arr) {
