@@ -1,9 +1,13 @@
 import Arrays.*;
 import Graph.Graph;
+import Hashing.TripletSum;
 import LList.LRUCache;
+import Recursion.LuckyNumber;
 import Recursion.PalindromicPartition;
+import Recursion.PossibleWords;
 import Recursion.PowerOfNumbers;
 import Recursion.PowerSets;
+import Recursion.Practice;
 import Searching.ColumSortedMatrix;
 import Searching.Count;
 import Sorting.MergeSort;
@@ -22,10 +26,11 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        int target = 15;
-        ArrayList<Integer> res = IndexesOfSubArraySum.subarraySum(arr, target);
-        System.out.println(res.toString());
+        int[] arr = { 1, 2, 4, 3, 6 };
+        int n = 5;
+        int target = 10;
+        var isTripletPresent = TripletSum.find3Numbers(arr, n, target);
+        System.out.println("Is triplet sum present: " + isTripletPresent);
     }
 
     public static void Print(int[] arr) {
