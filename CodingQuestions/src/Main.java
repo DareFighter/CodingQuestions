@@ -16,6 +16,7 @@ import Sorting.MergeSort;
 import Sorting.MergeThreeSortedArray;
 import Sorting.QuickSort;
 import Sorting.Sort;
+import Stack.LongestValidParenthesis;
 import Strings.PatternSearching;
 import DP.KadaneAlgorithm;
 import Tree.BinaryTree;
@@ -28,11 +29,9 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 1, 9, 3, 10, 4, 20, 2 };
-
-        int longestConsecutiveSubSeq = LongestConsecutiveSub.findLongesetConseqSubSeq(arr);
-        System.out.print("Longest consecutive sub sequence: " + longestConsecutiveSubSeq);
-        System.out.println();
+        String str = "((()";
+        int maxLength = LongestValidParenthesis.maxLength(str);
+        System.out.println("Longest valid parenthesis length: " + maxLength);
     }
 
     public static void Print(int[] arr) {
