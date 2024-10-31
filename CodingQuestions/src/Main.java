@@ -32,8 +32,8 @@ public class Main {
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
 
-        // Create a loop for testing(5 is pointing to 3) /
-        head.next.next.next.next.next = head.next.next;
+        // Create a loop for testing(5 is pointing to 1) /
+        head.next.next.next.next.next = head;
         RemoveLoop.removeLoop(head);
         boolean found = DetectLoop.detectLoopUsingFloydCycle(head);
         if (found)
