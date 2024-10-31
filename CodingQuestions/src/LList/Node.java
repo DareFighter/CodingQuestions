@@ -2,10 +2,10 @@ package LList;
 
 public class Node {
 
-    int data;
-    Node next;
+    public int data;
+    public Node next;
 
-    Node(int d) {
+    public Node(int d) {
         this.data = d;
         next = null;
     }

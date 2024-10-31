@@ -9,7 +9,8 @@ public class MergeSort {
     // [0,1,2,3]
     // [5,6,7,8,9]
     // naive approach
-    public static void MergeWithoutExtraSpace(int[] arr1, int[] arr2) {
+    public static void MergeWithoutExtraSpace(int[] arr1, int[] arr2, int m, int n) {
+
         int i = n - 1; // Last index of arr1
         int j = 0; // First index of arr2
 

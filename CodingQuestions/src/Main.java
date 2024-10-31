@@ -1,16 +1,13 @@
 import Arrays.*;
 import Graph.Graph;
-import Hashing.LongestConsecutiveSub;
-import Hashing.PositiveNegativePair;
-import Hashing.TripletSum;
+import LList.DetectLoop;
 import LList.LRUCache;
+import LList.Node;
+import LList.RemoveLoop;
 import Recursion.LuckyNumber;
 import Recursion.PalindromicPartition;
-import Recursion.PossibleWords;
 import Recursion.PowerOfNumbers;
 import Recursion.PowerSets;
-import Recursion.Practice;
-import Searching.ColumSortedMatrix;
 import Searching.Count;
 import Sorting.MergeSort;
 import Sorting.MergeThreeSortedArray;
@@ -29,9 +26,20 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        String str = "((()";
-        int maxLength = LongestValidParenthesis.maxLength(str);
-        System.out.println("Longest valid parenthesis length: " + maxLength);
+        Node head = new Node(1);
+        head.next = new Node(2);
+        head.next.next = new Node(3);
+        head.next.next.next = new Node(4);
+        head.next.next.next.next = new Node(5);
+
+        // Create a loop for testing(5 is pointing to 3) /
+        head.next.next.next.next.next = head.next.next;
+        RemoveLoop.removeLoop(head);
+        boolean found = DetectLoop.detectLoopUsingFloydCycle(head);
+        if (found)
+            System.out.println("Loop Found");
+        else
+            System.out.println("No Loop");
     }
 
     public static void Print(int[] arr) {
