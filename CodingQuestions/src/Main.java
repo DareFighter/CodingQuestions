@@ -9,6 +9,7 @@ import Recursion.PalindromicPartition;
 import Recursion.PowerOfNumbers;
 import Recursion.PowerSets;
 import Searching.Count;
+import Searching.FloorInaSortedArray;
 import Sorting.MergeSort;
 import Sorting.MergeThreeSortedArray;
 import Sorting.QuickSort;
@@ -26,20 +27,10 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Node head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(4);
-        head.next.next.next.next = new Node(5);
-
-        // Create a loop for testing(5 is pointing to 1) /
-        head.next.next.next.next.next = head;
-        RemoveLoop.removeLoop(head);
-        boolean found = DetectLoop.detectLoopUsingFloydCycle(head);
-        if (found)
-            System.out.println("Loop Found");
-        else
-            System.out.println("No Loop");
+        int[] arr = { 1, 2, 3, 1, 4, 5 };
+        int k = 3;
+        boolean isDuplicate = KthDistance.checkDuplicatesWithinK(arr, k);
+        System.out.println("Is Duplicate: " + isDuplicate);
     }
 
     public static void Print(int[] arr) {
