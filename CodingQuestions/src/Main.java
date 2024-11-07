@@ -1,15 +1,16 @@
 import Arrays.*;
 import Graph.Graph;
-import LList.DetectLoop;
+
 import LList.LRUCache;
 import LList.Node;
-import LList.RemoveLoop;
+
 import Recursion.LuckyNumber;
 import Recursion.PalindromicPartition;
 import Recursion.PowerOfNumbers;
 import Recursion.PowerSets;
 import Searching.Count;
-import Searching.FloorInaSortedArray;
+
+import Sorting.CountingSort;
 import Sorting.MergeSort;
 import Sorting.MergeThreeSortedArray;
 import Sorting.QuickSort;
@@ -27,16 +28,17 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 1, 4, 5 };
-        int k = 3;
-        boolean isDuplicate = KthDistance.checkDuplicatesWithinK(arr, k);
-        System.out.println("Is Duplicate: " + isDuplicate);
+        int[] arr = { 1, 4, 4, 1, 0, 1 };
+        int k = 5;
+        CountingSort.countSort(arr, k);
+        Print(arr);
     }
 
     public static void Print(int[] arr) {
         for (int num : arr) {
             System.out.print(num + " ");
         }
+        System.out.println();
     }
 
     private static void printBinaryTree(TreeNode<Integer> root) {
