@@ -28,10 +28,29 @@ import java.util.*;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 1, 4, 4, 1, 0, 1 };
-        int k = 5;
-        CountingSort.countSort(arr, k);
-        Print(arr);
+
+        int[] arr1 = { 1, 2, 3, 4, 5 };
+        Node head1 = getLLNodeFromArray(arr1);
+
+        while (head1 != null) {
+            System.out.println(head1.data);
+            head1 = head1.next;
+        }
+
+    }
+
+    public static Node getLLNodeFromArray(int[] arr) {
+        Node head = new Node(arr[0]);
+        Node temp = head;
+        int i = 1;
+        while (i < arr.length) {
+
+            head.next = new Node(arr[i]);
+            i++;
+            head = head.next;
+        }
+
+        return temp;
     }
 
     public static void Print(int[] arr) {
