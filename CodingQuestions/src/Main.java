@@ -1,6 +1,6 @@
 import Arrays.*;
 import Graph.Graph;
-
+import Greedy.FractionalKnapsack;
 import LList.LRUCache;
 import LList.Node;
 
@@ -29,14 +29,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr1 = { 1, 2, 3, 4, 5 };
-        Node head1 = getLLNodeFromArray(arr1);
-
-        while (head1 != null) {
-            System.out.println(head1.data);
-            head1 = head1.next;
-        }
-
+        List<Integer> val = new ArrayList<>(Arrays.asList(60, 120, 100));
+        List<Integer> wt = new ArrayList<>(Arrays.asList(10, 30, 20));
+        int capacity = 50;
+        var maxValue = FractionalKnapsack.fractionalKnapsack(val, wt, capacity);
+        System.out.println("Max Value: " + maxValue);
     }
 
     public static Node getLLNodeFromArray(int[] arr) {
