@@ -2,6 +2,7 @@ import Arrays.*;
 import Graph.Graph;
 import Greedy.FractionalKnapsack;
 import LList.LRUCache;
+import LList.MergeKSortedList;
 import LList.Node;
 
 import Recursion.LuckyNumber;
@@ -22,18 +23,33 @@ import Tree.BinaryTree;
 import Tree.LLNode;
 import Tree.TreeNode;
 import DP.DP;
+
+import java.lang.reflect.Array;
 import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        int[] onearr = { 1, 2, 3 };
+        int[] twoarr = { 4, 5 };
+        int[] threearr = { 5, 6 };
+        int[] fourarr = { 7, 8 };
+        Node one = getLLNodeFromArray(onearr);
+        Node two = getLLNodeFromArray(twoarr);
+        Node three = getLLNodeFromArray(threearr);
+        Node four = getLLNodeFromArray(fourarr);
+        List<Node> llListArr = new ArrayList<>();
+        llListArr.add(one);
+        llListArr.add(two);
+        llListArr.add(three);
+        llListArr.add(four);
+        Node head = MergeKSortedList.MergeLists(llListArr);
 
-        List<Integer> val = new ArrayList<>(Arrays.asList(60, 120, 100));
-        List<Integer> wt = new ArrayList<>(Arrays.asList(10, 30, 20));
-        int capacity = 50;
-        var maxValue = FractionalKnapsack.fractionalKnapsack(val, wt, capacity);
-        System.out.println("Max Value: " + maxValue);
+        while (head != null) {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
     }
 
     public static Node getLLNodeFromArray(int[] arr) {
